@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR;
+using UnityEngine.AI;
 
 public class zombie : MonoBehaviour
 {
+    public Transform target;
+    private NavMeshAgent agent;
 
     private Rigidbody[] rbs;
 
@@ -11,13 +15,18 @@ public class zombie : MonoBehaviour
     void Start()
     {
         rbs = GetComponentsInChildren<Rigidbody>();
+
+        // Get zombie to follow XRRig
+        agent = GetComponent<NavMeshAgent>();
+        target = FindObjectOfType<UnityEngine.XR.Interaction.Toolkit.XRRig>().transform;
+
         DeactivateRageDoll();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        agent.SetDestination(target.position);
     }
 
     void ActivateRageDoll()
@@ -35,4 +44,6 @@ public class zombie : MonoBehaviour
             item.isKinematic = true;
         }
     }
+
+
 }

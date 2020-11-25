@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1149882720486804409}
   - component: {fileID: 6942987384791096242}
   - component: {fileID: 3128841390759893105}
+  - component: {fileID: -8961829539368762819}
   m_Layer: 0
   m_Name: Left Lower Leg
   m_TagString: Untagged
@@ -110,3 +111,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0040598502, y: 0.00552689, z: 0.009266212}
   m_Center: {x: -0.0030140313, y: -0.00015215889, z: 0.0046399473}
+--- !u!114 &-8961829539368762819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2356323405229593860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be8316ede755694b9018fdeaf51ddc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limbPrefab: {fileID: 0}

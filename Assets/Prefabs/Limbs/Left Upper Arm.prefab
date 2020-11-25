@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8404823513584471768}
   - component: {fileID: 3281526746282301242}
   - component: {fileID: -6650680486012575538}
+  - component: {fileID: 4949428870595039999}
   m_Layer: 0
   m_Name: Left Upper Arm
   m_TagString: Untagged
@@ -110,3 +111,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.0042378837, y: 0.002976483, z: 0.0029611236}
   m_Center: {x: -0.0051533203, y: -0.00009307034, z: 0.02340085}
+--- !u!114 &4949428870595039999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 580644855449325701}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be8316ede755694b9018fdeaf51ddc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limbPrefab: {fileID: 0}

@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 1520827028140471734}
   - component: {fileID: -1506228138755921151}
   - component: {fileID: 8041315554917529359}
+  - component: {fileID: -2266292096184424968}
   m_Layer: 0
   m_Name: Right Lower Arm
   m_TagString: Untagged
@@ -110,3 +111,16 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.011157609, y: 0.004385379, z: 0.0030919167}
   m_Center: {x: 0.0125117, y: -0.0012224925, z: 0.02274035}
+--- !u!114 &-2266292096184424968
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070045529662723899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2be8316ede755694b9018fdeaf51ddc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  limbPrefab: {fileID: 0}
