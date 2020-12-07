@@ -7,13 +7,19 @@ public class zombie : MonoBehaviour
 {
 
     public Transform target;
-    private NavMeshAgent agent;
+    public int ZombieHealth;
+    private bool isDead = false;
 
+
+    private NavMeshAgent agent;
     private Rigidbody[] rbs;
 
     // Start is called before the first frame update
     void Start()
     {
+
+        ZombieHealth = 100;
+
         rbs = GetComponentsInChildren<Rigidbody>();
 
         // Get zombie to follow XRRig
@@ -53,17 +59,27 @@ public class zombie : MonoBehaviour
         Destroy(this);
     }
 
-
-    public void Hit()
+    public bool isZombieDead()
     {
-        Death();
+        return isDead;
     }
+
+
+    public void Hit(int damage)
+    {
+        ZombieHealth -= damage;
+        if(ZombieHealth <= 0)
+        {
+            isDead = true;
+            Death();
+        }
+    }
+
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("Weapon"))
         {
-            Hit();
             Debug.Log("HIT");
         }
         else

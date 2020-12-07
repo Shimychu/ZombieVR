@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Head : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
-
     // Start is called before the first frame update
     void Start()
     {
@@ -17,18 +16,8 @@ public class Head : MonoBehaviour
         
     }
 
-    public void Hit()
-    {
-        GetComponentInParent<zombie>().Hit(100);
-        Destroy(this);
-    }
-
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Weapon"))
-        {
-            Hit();
-            Debug.Log("HIT HEAD");
-        }
+        Destroy(this);
     }
 }
