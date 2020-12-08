@@ -4,11 +4,10 @@ using UnityEngine;
 
 public class Chest : MonoBehaviour
 {
-    BoxCollider ChestHitBox;
     // Start is called before the first frame update
     void Start()
     {
-        ChestHitBox = GetComponent<BoxCollider>();
+       
     }
 
     // Update is called once per frame
@@ -19,7 +18,7 @@ public class Chest : MonoBehaviour
 
     public void Hit()
     {
-        GetComponentInParent<zombie>().Hit(40);
+        GetComponentInParent<zombie>().Hit(50);
         if (GetComponentInParent<zombie>().isZombieDead())
         {
             Destroy(this);
@@ -29,14 +28,12 @@ public class Chest : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("HIT CHEST???");
-        if (collision.collider == ChestHitBox)
+        
+        //Debug.Log("HIT CHEST???");
+        if (collision.gameObject.CompareTag("Weapon"))
         {
-            if (collision.gameObject.CompareTag("Weapon"))
-            {
-                Hit();
-                Debug.Log("HIT CHEST");
-            }
+            Hit();
+            Debug.Log("HIT CHEST");
         }
 
     }

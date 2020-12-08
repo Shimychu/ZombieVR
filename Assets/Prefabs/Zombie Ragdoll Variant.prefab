@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  ZombieHealth: 0
 --- !u!195 &8391197148966135895
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -35,6 +36,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &6986525669673418041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5762140688779208381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67913b417d7fcf24697f8b8b4e90a233, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &8041770958273106677
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -269,6 +282,12 @@ PrefabInstance:
 --- !u!1 &5762140688779208377 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2336559486550520908, guid: 9d12c7a8dc1177e43854c81164e52d61,
+    type: 3}
+  m_PrefabInstance: {fileID: 8041770958273106677}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &5762140688779208381 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2336559486550520904, guid: 9d12c7a8dc1177e43854c81164e52d61,
     type: 3}
   m_PrefabInstance: {fileID: 8041770958273106677}
   m_PrefabAsset: {fileID: 0}
