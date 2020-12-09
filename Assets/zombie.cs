@@ -10,6 +10,8 @@ public class zombie : MonoBehaviour
     public int ZombieHealth;
     private bool isDead = false;
 
+    public AudioClip zombieAudio;
+    public AudioClip zombieDeathAudio;
 
     private NavMeshAgent agent;
     private Rigidbody[] rbs;
@@ -33,6 +35,12 @@ public class zombie : MonoBehaviour
     void Update()
     {
         agent.SetDestination(target.position);
+
+        if (Vector3.Distance(target.position, transform.position) < 1.5f)
+        {
+            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+        }
+
     }
 
     void ActivateRageDoll()
@@ -56,7 +64,7 @@ public class zombie : MonoBehaviour
         ActivateRageDoll();
         agent.enabled = false;
         GetComponent<Animator>().enabled = false;
-        Destroy(this);
+        GetComponent<AudioSource>().PlayOneShot(zombieDeathAudio);
         RemoveDeadBody(1);
     }
 
@@ -66,6 +74,7 @@ public class zombie : MonoBehaviour
 
         Object.Destroy(gameObject);
         Destroy(gameObject);
+        Destroy(this);
     }
     public bool isZombieDead()
     {
@@ -75,6 +84,7 @@ public class zombie : MonoBehaviour
 
     public void Hit(int damage)
     {
+        GetComponent<AudioSource>().PlayOneShot(zombieAudio);
         ZombieHealth -= damage;
         if(ZombieHealth <= 0)
         {
