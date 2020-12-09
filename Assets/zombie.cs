@@ -65,17 +65,10 @@ public class zombie : MonoBehaviour
         agent.enabled = false;
         GetComponent<Animator>().enabled = false;
         GetComponent<AudioSource>().PlayOneShot(zombieDeathAudio);
-        RemoveDeadBody(1);
-    }
-
-    IEnumerator RemoveDeadBody(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        Object.Destroy(gameObject);
-        Destroy(gameObject);
+        Destroy(gameObject,10);
         Destroy(this);
     }
+
     public bool isZombieDead()
     {
         return isDead;
