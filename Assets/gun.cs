@@ -9,6 +9,8 @@ public class gun : MonoBehaviour
     public Transform barrel;
     public AudioSource audioGun;
     public AudioClip audioGunFire;
+    public AudioClip audioGunEmpty;
+    public int bulletCount = 12;
 
 
 
@@ -26,9 +28,16 @@ public class gun : MonoBehaviour
 
     public void Fire()
     {
-        GameObject spawnedBullet = Instantiate(bullet, barrel.position, barrel.rotation);
-        spawnedBullet.GetComponent<Rigidbody>().velocity = speed * barrel.forward;
-        audioGun.PlayOneShot(audioGunFire);
-        Destroy(spawnedBullet, 2);
+        bulletCount--;
+        if(bulletCount >= 0)
+        {
+            GameObject spawnedBullet = Instantiate(bullet, barrel.position, barrel.rotation);
+            spawnedBullet.GetComponent<Rigidbody>().velocity = speed * barrel.forward;
+            audioGun.PlayOneShot(audioGunFire);
+            Destroy(spawnedBullet, 2);
+        } else
+        {
+            audioGun.PlayOneShot(audioGunEmpty);
+        }
     }
 }
