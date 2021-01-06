@@ -26,6 +26,17 @@ public class zombie : MonoBehaviour
 
         // Get zombie to follow XRRig
         agent = GetComponent<NavMeshAgent>();
+
+        // Set it so that the zombie's speed 2/3 of zombies will be slower type, while 1/3 will be faster type.
+        int odds = Random.Range(0, 3);
+        if(odds < 2)
+        {
+            agent.speed = Random.Range(0.15f, 0.35f);
+        }
+        else
+        {
+            agent.speed = Random.Range(0.25f, 1.00f);
+        }
         target = FindObjectOfType<UnityEngine.XR.Interaction.Toolkit.XRRig>().transform;
 
         DeactivateRageDoll();

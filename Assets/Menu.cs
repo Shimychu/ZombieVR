@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     private int newScene;
+    private AudioClip menu_select;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +20,7 @@ public class Menu : MonoBehaviour
 
     public void loadNextScene()
     {
-        
+        GetComponent<AudioSource>().PlayOneShot(menu_select);
         SceneManager.LoadScene(newScene);
     }
 }

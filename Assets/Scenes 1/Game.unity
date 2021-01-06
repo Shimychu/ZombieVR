@@ -110,10 +110,10 @@ NavMeshSettings:
     agentRadius: 0.5
     agentHeight: 2
     agentSlope: 60
-    agentClimb: 0.4
+    agentClimb: 1
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
-    minRegionArea: 2
+    minRegionArea: 4
     manualCellSize: 0
     cellSize: 0.16666667
     manualTileSize: 0
@@ -317,7 +317,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 137013665}
   m_LocalRotation: {x: -0, y: -0.48567283, z: -0, w: -0.87414074}
-  m_LocalPosition: {x: -74.8, y: 0, z: -0.1}
+  m_LocalPosition: {x: -51.1, y: 0, z: 0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1325168366}
@@ -1937,7 +1937,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752055741}
   m_LocalRotation: {x: -0, y: -0.92908186, z: -0, w: -0.3698743}
-  m_LocalPosition: {x: 1.2, y: 0, z: 64.3}
+  m_LocalPosition: {x: 1.6, y: 0, z: 55.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1325168366}
@@ -3737,7 +3737,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1441146603}
   m_LocalRotation: {x: 0.000083318795, y: 0.9049326, z: 0.12465111, w: -0.40688944}
-  m_LocalPosition: {x: 70.4, y: -10.7, z: 0.3}
+  m_LocalPosition: {x: 57, y: -1.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1325168366}
@@ -3988,7 +3988,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1652800287}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 100, y: 0, z: 0}
+  m_LocalPosition: {x: 100, y: 0.1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 534010375}
@@ -4313,75 +4313,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1679860576}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1683933571
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1320328181492869685, guid: 0b843dd7f754dfe45bd26f17d1618a73,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.1310017
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320328181492869685, guid: 0b843dd7f754dfe45bd26f17d1618a73,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320328181492869685, guid: 0b843dd7f754dfe45bd26f17d1618a73,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 7.6307073
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320328181492869685, guid: 0b843dd7f754dfe45bd26f17d1618a73,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320328181492869685, guid: 0b843dd7f754dfe45bd26f17d1618a73,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.9901889
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320328181492869685, guid: 0b843dd7f754dfe45bd26f17d1618a73,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320328181492869685, guid: 0b843dd7f754dfe45bd26f17d1618a73,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.1397355
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320328181492869685, guid: 0b843dd7f754dfe45bd26f17d1618a73,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320328181492869685, guid: 0b843dd7f754dfe45bd26f17d1618a73,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320328181492869685, guid: 0b843dd7f754dfe45bd26f17d1618a73,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -196.06499
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320328181492869685, guid: 0b843dd7f754dfe45bd26f17d1618a73,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1320328181493167637, guid: 0b843dd7f754dfe45bd26f17d1618a73,
-        type: 3}
-      propertyPath: m_Name
-      value: Zombie Ragdoll Variant Variant
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 0b843dd7f754dfe45bd26f17d1618a73, type: 3}
 --- !u!1 &1750408970
 GameObject:
   m_ObjectHideFlags: 0
@@ -5550,7 +5481,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2138571341}
   m_LocalRotation: {x: -0.024181915, y: 0.38878402, z: 0.040605128, w: -0.920116}
-  m_LocalPosition: {x: -0.7, y: 0.5, z: -77.6}
+  m_LocalPosition: {x: 1.06, y: 0.53, z: -53.85}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1325168366}
