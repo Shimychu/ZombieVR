@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Spawner : MonoBehaviour
 {
@@ -13,10 +14,15 @@ public class Spawner : MonoBehaviour
     private int totalZombies = 10;
     public AudioClip openingAudio;
 
+    public UnityEvent updateWave;
+    public GameObject UI;
+
     // Start is called before the first frame update
     void Start()
     {
         nextWave = true;
+        updateWave = new UnityEvent();
+        UI = GameObject.Find("UI");
     }
 
     // Update is called once per frame
@@ -24,6 +30,8 @@ public class Spawner : MonoBehaviour
     {
         if(nextWave)
         {
+            GameInfo g = UI.GetComponent<GameInfo>();
+            g.updateText(totalZombies);
             nextWave = false;
             StartCoroutine(WaitOpening());
             StartCoroutine(WaitZombie());
@@ -50,5 +58,10 @@ public class Spawner : MonoBehaviour
             yield return new WaitForSecondsRealtime(2);
         }
         Debug.Log("waiting 3 seconds");
+    }
+
+    public int getTotalZombie()
+    {
+        return totalZombies;
     }
 }
