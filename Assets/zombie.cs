@@ -49,7 +49,7 @@ public class zombie : MonoBehaviour
 
         if (Vector3.Distance(target.position, transform.position) < 1.5f)
         {
-            UnityEngine.SceneManagement.SceneManager.LoadScene(0);
+            UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
         }
 
     }
