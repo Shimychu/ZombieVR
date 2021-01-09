@@ -16,6 +16,8 @@ public class zombie : MonoBehaviour
     private NavMeshAgent agent;
     private Rigidbody[] rbs;
 
+    public static int deadZombieCount = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -72,6 +74,7 @@ public class zombie : MonoBehaviour
 
     public void Death()
     {
+        deadZombieCount++;
         ActivateRageDoll();
         agent.enabled = false;
         GetComponent<Animator>().enabled = false;
@@ -108,8 +111,15 @@ public class zombie : MonoBehaviour
         {
             Debug.Log("NO HIT");
         }
-
-         
     }
 
+    public static int getDeadZombie()
+    {
+        return deadZombieCount;
+    }
+
+    public void resetDeadZombieCount()
+    {
+        deadZombieCount = 0;
+    }
 }

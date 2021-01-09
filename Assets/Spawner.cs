@@ -32,6 +32,7 @@ public class Spawner : MonoBehaviour
         {
             GameInfo g = UI.GetComponent<GameInfo>();
             g.updateText(totalZombies);
+            g.updateTotalZombies(totalZombies);
             nextWave = false;
             StartCoroutine(WaitOpening());
             StartCoroutine(WaitZombie());
