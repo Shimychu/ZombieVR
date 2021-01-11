@@ -41,13 +41,15 @@ public class Spawner : MonoBehaviour
 
     IEnumerator WaitZombie()
     {
-        yield return new WaitForSeconds(6);
+        yield return new WaitForSeconds(1);
         for (int i = 0; i < totalZombies; i++)
         {
             Transform randomPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
             Instantiate(spawnGameObject, randomPoint.position, randomPoint.rotation);
             yield return new WaitForSeconds(2); 
         }
+        yield return new WaitForSeconds(10);
+        nextWave = true;
         totalZombies = totalZombies + 10;
     }
 
@@ -58,7 +60,6 @@ public class Spawner : MonoBehaviour
             GetComponent<AudioSource>().PlayOneShot(openingAudio);
             yield return new WaitForSecondsRealtime(2);
         }
-        Debug.Log("waiting 3 seconds");
     }
 
     public int getTotalZombie()

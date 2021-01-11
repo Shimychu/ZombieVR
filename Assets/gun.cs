@@ -41,7 +41,7 @@ public class gun : MonoBehaviour
         {
             bulletCount--;
             GameObject spawnedBullet = Instantiate(bullet, barrel.position, barrel.rotation);
-            spawnedBullet.GetComponent<Rigidbody>().velocity = speed * barrel.forward;
+            spawnedBullet.GetComponent<Rigidbody>().velocity = speed * barrel.forward * 2;
             audioGun.PlayOneShot(audioGunFire);
             Destroy(spawnedBullet, 2);
         } else

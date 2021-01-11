@@ -118,7 +118,7 @@ public class zombie : MonoBehaviour
         return deadZombieCount;
     }
 
-    public void resetDeadZombieCount()
+    public static void resetDeadZombieCount()
     {
         deadZombieCount = 0;
     }
