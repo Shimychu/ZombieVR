@@ -12,7 +12,7 @@ public class Menu : MonoBehaviour
     void Start()
     {
         Scene newScene = SceneManager.CreateScene("Game");
-        anim = gameObject.GetComponent<Animator>();
+        //anim = gameObject.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -29,7 +29,7 @@ public class Menu : MonoBehaviour
     IEnumerator menuAnimation()
     {
         GetComponent<AudioSource>().PlayOneShot(menu_select);
-        anim.Play("Fade out");
+        //anim.Play("Fade out");
         yield return new WaitForSeconds(2);
         SceneManager.LoadScene(newScene);
     }
