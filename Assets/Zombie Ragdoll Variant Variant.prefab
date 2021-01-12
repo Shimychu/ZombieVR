@@ -28,8 +28,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1685565817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0, y: -0.0014, z: 0.00063}
-  m_LocalScale: {x: 0.005142957, y: 0.008486128, z: 0.0050282213}
+  m_LocalPosition: {x: 0, y: -0.00149, z: 0.00063}
+  m_LocalScale: {x: 0.0075415056, y: 0.010531303, z: 0.005472213}
   m_Children: []
   m_Father: {fileID: 1320328181492869709}
   m_RootOrder: 3
@@ -102,7 +102,7 @@ AudioSource:
   Spatialize: 0
   SpatializePostEffects: 0
   Priority: 128
-  DopplerLevel: 1
+  DopplerLevel: 1.22
   MinDistance: 1
   MaxDistance: 8
   Pan2D: 0
@@ -154,7 +154,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 0.03888889
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -365,7 +365,7 @@ PrefabInstance:
     - target: {fileID: 5762140688779208377, guid: c07f16005edb75149a596e6325fe4056,
         type: 3}
       propertyPath: m_Name
-      value: Zombie Ragdoll Variant
+      value: Zombie Ragdoll Variant Variant
       objectReference: {fileID: 0}
     - target: {fileID: 5762140688779442841, guid: c07f16005edb75149a596e6325fe4056,
         type: 3}
@@ -511,6 +511,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_ConnectedAnchor.z
       value: -0.0000000023282904
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977161005924378835, guid: c07f16005edb75149a596e6325fe4056,
+        type: 3}
+      propertyPath: m_Radius
+      value: 0.007
       objectReference: {fileID: 0}
     - target: {fileID: 8977161005924378838, guid: c07f16005edb75149a596e6325fe4056,
         type: 3}

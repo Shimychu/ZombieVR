@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class GameInfo : MonoBehaviour
 {
 
+    private int totalAddZombies;
     private int totalZombies;
     public TMPro.TextMeshProUGUI wave_text;
     public TMPro.TextMeshProUGUI zombie_remain_text;
@@ -40,7 +41,7 @@ public class GameInfo : MonoBehaviour
 
     public void updateTotalZombies(int zombies)
     {
-        totalZombies = zombies;
+        totalZombies += zombies;
     }
 
     public void updateRemainingZombie()

@@ -33,11 +33,11 @@ public class zombie : MonoBehaviour
         int odds = Random.Range(0, 3);
         if(odds < 2)
         {
-            agent.speed = Random.Range(0.15f, 0.35f);
+            agent.speed = Random.Range(0.25f, 0.45f);
         }
         else
         {
-            agent.speed = Random.Range(0.25f, 1.00f);
+            agent.speed = Random.Range(0.45f, 1.00f);
         }
         target = FindObjectOfType<UnityEngine.XR.Interaction.Toolkit.XRRig>().transform;
 
@@ -49,7 +49,7 @@ public class zombie : MonoBehaviour
     {
         agent.SetDestination(target.position);
 
-        if (Vector3.Distance(target.position, transform.position) < 1.5f)
+        if (Vector3.Distance(target.position, transform.position) < 1.0f)
         {
             UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver");
         }
@@ -79,7 +79,7 @@ public class zombie : MonoBehaviour
         agent.enabled = false;
         GetComponent<Animator>().enabled = false;
         GetComponent<AudioSource>().PlayOneShot(zombieDeathAudio);
-        Destroy(gameObject,10);
+        Destroy(gameObject,5);
         Destroy(this);
     }
 

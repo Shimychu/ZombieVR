@@ -48,7 +48,7 @@ public class Spawner : MonoBehaviour
             Instantiate(spawnGameObject, randomPoint.position, randomPoint.rotation);
             yield return new WaitForSeconds(2); 
         }
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(30);
         nextWave = true;
         totalZombies = totalZombies + 10;
     }
