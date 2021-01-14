@@ -111,6 +111,14 @@ public class zombie : MonoBehaviour
         {
             Debug.Log("NO HIT");
         }
+        if (collision.gameObject.CompareTag("GoldenWeapon"))
+        {
+            Hit(1000);
+        }
+        else
+        {
+            Debug.Log("NO HIT");
+        }
     }
 
     public static int getDeadZombie()
