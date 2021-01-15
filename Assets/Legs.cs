@@ -17,9 +17,9 @@ public class Legs : MonoBehaviour
 
     }
 
-    public void Hit()
+    public void Hit(int dmg)
     {
-        GetComponentInParent<zombie>().Hit(30);
+        GetComponentInParent<zombie>().Hit(dmg);
         if (GetComponentInParent<zombie>().isZombieDead())
         {
             Destroy(this);
@@ -30,8 +30,12 @@ public class Legs : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Weapon"))
         {
-            Hit();
+            Hit(30);
             Debug.Log("HIT LEGS");
+        }
+        if (collision.gameObject.CompareTag("GoldenWeapon"))
+        {
+            Hit(1000);
         }
     }
 }

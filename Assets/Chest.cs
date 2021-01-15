@@ -16,9 +16,9 @@ public class Chest : MonoBehaviour
 
     }
 
-    public void Hit()
+    public void Hit(int dmg)
     {
-        GetComponentInParent<zombie>().Hit(50);
+        GetComponentInParent<zombie>().Hit(dmg);
         if (GetComponentInParent<zombie>().isZombieDead())
         {
             Destroy(this);
@@ -32,10 +32,13 @@ public class Chest : MonoBehaviour
         //Debug.Log("HIT CHEST???");
         if (collision.gameObject.CompareTag("Weapon"))
         {
-            Hit();
+            Hit(50);
             Debug.Log("HIT CHEST");
         }
-
+        if (collision.gameObject.CompareTag("GoldenWeapon"))
+        {
+            Hit(1000);
+        }
     }
 
 }

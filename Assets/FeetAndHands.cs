@@ -16,9 +16,9 @@ public class FeetAndHands : MonoBehaviour
 
     }
 
-    public void Hit()
+    public void Hit(int dmg)
     {
-        GetComponentInParent<zombie>().Hit(10);
+        GetComponentInParent<zombie>().Hit(dmg);
         if (GetComponentInParent<zombie>().isZombieDead())
         {
             Destroy(this);
@@ -29,8 +29,12 @@ public class FeetAndHands : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Weapon"))
         {
-            Hit();
+            Hit(20);
             Debug.Log("HIT Feet/Hands");
+        }
+        if (collision.gameObject.CompareTag("GoldenWeapon"))
+        {
+            Hit(1000);
         }
     }
 }

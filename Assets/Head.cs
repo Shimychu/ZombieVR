@@ -17,9 +17,9 @@ public class Head : MonoBehaviour
         
     }
 
-    public void Hit()
+    public void Hit(int dmg)
     {
-        GetComponentInParent<zombie>().Hit(100);
+        GetComponentInParent<zombie>().Hit(dmg);
         Destroy(this);
     }
 
@@ -27,8 +27,12 @@ public class Head : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Weapon"))
         {
-            Hit();
+            Hit(100);
             Debug.Log("HIT HEAD");
+        }
+        if (collision.gameObject.CompareTag("GoldenWeapon"))
+        {
+            Hit(1000);
         }
     }
 }

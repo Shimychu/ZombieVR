@@ -16,9 +16,9 @@ public class Arms : MonoBehaviour
 
     }
 
-    public void Hit()
+    public void Hit(int dmg)
     {
-        GetComponentInParent<zombie>().Hit(20);
+        GetComponentInParent<zombie>().Hit(dmg);
         if (GetComponentInParent<zombie>().isZombieDead())
         {
             Destroy(this);
@@ -29,8 +29,12 @@ public class Arms : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Weapon"))
         {
-            Hit();
+            Hit(25);
             Debug.Log("HIT ARMS");
+        }
+        if (collision.gameObject.CompareTag("GoldenWeapon"))
+        {
+            Hit(1000);
         }
     }
 }
